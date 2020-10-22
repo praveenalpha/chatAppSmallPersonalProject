@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Realtime Chat App</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="overall-container">
+      <div class="float-container participants-container">
+        <!-- <div class=""> -->
+        <div class="live-count">
+          <span class="online">Online </span>
+          <div class="count">(0)</div>
+        </div>
+        <div class="participants-list">
+          <div class="online-list"></div>
+        </div>
+        <!-- </div> -->
+      </div>
+      <div class="float-container chat-container">
+        <div class="user-name">UserName</div>
+        <!-- <div class="chat-container"> -->
+        <div class="chat-box"></div>
+        <div class="chat-input">
+          <div class="chat-type-box">
+            <input type="text" name="" id="chat" />
+          </div>
+          <div class="chat-send">Send</div>
+        </div>
+        <!-- </div> -->
+      </div>
+    </div>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.3.1/socket.io.js"
+      integrity="sha512-AcZyhRP/tbAEsXCCGlziPun5iFvcSUpEz2jKkx0blkYKbxU81F+iq8FURwPn1sYFeksJ+sDDrI5XujsqSobWdQ=="
+      crossorigin="anonymous"
+    ></script>
+    <script>
+      const socket = io.connect("http://localhost:3000");
+    </script>
+    <script src="./script.js"></script>
+    <script src="./socket.js"></script>
+  </body>
+</html>
